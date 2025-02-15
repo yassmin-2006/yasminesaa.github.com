@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>la vage auto prix</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+         background-image: url(voitur\ blanc.jpeg);
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .lavage-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .lavage-card:hover {
+            transform: translateY(-15px);
+        }
+
+        h1  {
+            text-align: center;
+            color: #fff;
+            font-size: 3em;
+            margin-top: 70px;
+            margin-bottom: 20px;
+            text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+        }
+ 
+        h3 {
+            text-align: center;
+            color: #fff;
+            margin: 10px 0;
+            text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #2c5f2d;
+            margin-top: 0;
+        }
+
+        .property-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .property-list li {
+            margin: 10px 0;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+        }
+
+        .price {
+            font-size: 1.8em;
+            color: #2c5f2d;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .reserve-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #2c5f2d;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 2px solid #2c5f2d;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+
+        .reserve-btn:hover {
+            background: transparent;
+            color: #2c5f2d;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+        table{
+            align-items: center;
+            z-index: 10;
+        }
+       
+        /* Pour centrer le tableau horizontalement */
+        .table-container {
+          display: flex;
+          justify-content: center; /* Centre horizontalement */
+          padding: 20px;
+        }
+    
+        table {
+          border-collapse: collapse;
+          border: 2px solid green; /* Bordure verte autour du tableau */
+        }
+    
+        th, td {
+          border: 1px solid black; /* Bordures des cellules */
+          padding: 10px;
+          text-align: center;
+        }
+        td{
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+    
+        th {
+          background-color: #f0f0f0; /* Couleur de fond pour les en-têtes */
+        }
+        
+        header {
+    display: flex;
+    
+    align-items: center;
+    background-color: #22222244;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    animation: fadeIn 1s ease-out;
+}
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 610px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    margin-right: 0px;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+header.sticky {
+    background-color: rgba(30, 58, 138, 0.9);
+    transition: background-color 0.3s ease-in-out;
+}
+.logo{
+    width: 70px;
+    height: 50px;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="logo.jpg" alt="" class="logo"></div>
+        <nav>
+            <ul>
+                <li class="li"><a href="accueil.html">Accueil</a></li>
+                <li class="li"><a href="#">À propos</a></li>
+                <li class="li"><a href="prise.html">Tarifs</a></li>
+                <li class="li"><a href="formulaire.html">Réservation</a></li>
+                <li class="li"><a href="cntacte.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Nos tarifs & prestations</h1>
+    <div class="rot"><div class="rotate"></div></div>
+    <h3>Chez nous, vous pouvez profiter du lavage à domicile de l’extérieur ou de l’intérieur de votre voiture. Nos tarifs sont définis en fonction des prestations fournies ainsi que la catégorie de votre véhicule. Toutefois, nous vous recommandons d’opter pour un lavage complet afin de profiter des meilleures d’économies ! </h3>
+    
+    <div class="container">
+        <div class="lavage-card">
+            <h2>Lavage auto intérieur - Formule Basique <br><br>
+                Voir ci-dessous le tableau des prix
+            </h2>
+            <ul class="property-list">
+                <li>Dépoussiérage Habitacle</li>
+                <li>  Nettoyage Tapis</li>
+                <li> Nettoyage Sièges</li>
+                <li>   Nettoyage Coffre</li>
+                <li>Nettoyage Vitres intérieures</li>
+            </ul>
+            <a href="formulaire.html"class="reserve-btn">Réserver</a>
+        </div>
+
+        
+        <div class="lavage-card">
+            <h2>Lavage auto intérieur - Formule Premium <br><br>
+                Voir ci-dessous le tableau des prix
+                </h2>
+            
+            <ul class="property-list">
+                <li> Prestations de la formule Basique</li>
+                <li>Nettoyage Plafond de toit</li>
+                <li>Traitement Cuir & Tissu</li>
+                <li>Parfumage Habitacle (au choix)</li>
+                <li> Lavage moteur</li>
+            </ul>
+            <a href="formulaire.html" class="reserve-btn">Réserver</a>
+        </div>
+
+    
+        <div class="lavage-card">
+            <h2>Lavage auto intérieur - Formule Personnalisée <br><br><br><br>
+                Prix sur devis (en fonction des prestations choisies)
+                 </h2>
+            <ul class="property-list">
+                <li>Prestations de la formule Basique / Premium</li>
+                <li>Prestations supplémentaires au choix</li>
+                
+            </ul>
+            <a href="formulaire.html" class="reserve-btn">Réserver</a>
+        </div>
+    </div>
+      
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>Type de formule</th>
+            <th>Catégorie A (Citadines)</th>
+            <th>Catégorie B (Berlines)</th>
+            <th>Catégorie C (Petit SUV)</th>
+            <th>Autres catégories</th>
+          </tr>
+          <tr>
+            <td>Lavage auto complet - Formule Basique</td>
+            <td>149 DH</td>
+            <td>189 DH</td>
+            <td>189 DH</td>
+            <td>Sur devis</td>
+          </tr>
+          <tr>
+            <td>Lavage auto complet - Formule Premium</td>
+            <td>699 DH</td>
+            <td>849 DH</td>
+            <td>849 DH</td>
+            <td>Sur devis</td>
+          </tr>
+        </table>
+      </div>
+  
+
+</body>
+</html>

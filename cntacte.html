@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <section class="contact-container">
+        <div class="contact-info">
+            <img src="resepetion.jpg" alt="Support client">
+            <h2>Nous sommes à votre écoute, contactez-nous !</h2>
+            <p>
+                Besoin d’informations supplémentaires, de conseils personnalisés ou de réserver votre prochain lavage ? 
+                Nous sommes là pour vous, n’hésitez pas à nous contacter via le formulaire ci-contre.
+            </p>
+        </div>
+
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <label for="name">Nom complet *</label>
+                <div class="name-group">
+                    <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
+                    <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
+                </div>
+
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+
+                <label for="phone">Téléphone *</label>
+                <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
+
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prise de Rendez-vous - Lavage</title>
+    <link rel="stylesheet" href="formulaire.css">
+</head>
+<body>
+    
+    <div class="image-contain">
+        <div class="text-overly">
+        <h1 >Personnalisez votre prestation de lavage idéale</h1>
+        Bienvenue dans notre espace de réservation à la carte, conçu pour vous offrir une expérience de lavage auto sur mesure. Sélectionnez parmi notre gamme complète de prestations pour créer le lavage parfait qui correspond à vos besoins et à ceux de votre véhicule.
+        <br><br>
+        <strong> Le paiement s'effectue sur place, après le nettoyage de votre véhicule !</strong>
+        <br><br>
+        </div> 
+        <img src="centre d'appele.jpg" alt="lavage">
+    </div>  
+    <div class="container">
+        <h2>Je réserve mon lavage auto !</h2>
+        <p>Renseignez vos informations de contact obligatoires ainsi que la date & l’heure souhaitée puis sélectionnez les services souhaités parmi notre liste de prestations à la carte. Nous reviendrons vers vous avec un devis dans les plus brefs délais !</p>
+        <form action="traitement.php" method="get">
+        <div class="border"> 
+            <label for="name" placeholder="Nom et Prenom">Nom et Prénom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone" placeholder="Numéro de Téléphone">Numéro de Téléphone :</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="border">
+            <label for="email" placeholder="E-mail">E-mail :</label>
+            <input type="email" id="email" name="email">
+
+            <label for="service">Type de Lavage :</label>
+            <select id="service" name="service" required>
+                <option value="exterieur">Lavage Extérieur</option>
+                <option value="interieur">Lavage Intérieur</option>
+                <option value="complet">Lavage Complet</option>
+            </select>
+        </div>
+        <div class="border">
+            <label for="vehicle">Type de Véhicule :</label>
+            <select id="vehicle" name="vehicle" required>
+                <option value="voiture">Voiture</option>
+                <option value="moto">Moto</option>
+                <option value="camion">Camion</option>
+            </select>
+        
+            <label for="date">Date du Rendez-vous :</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="border">
+            <label for="time">Heure Préférée :</label>
+            <input type="time" id="time" name="time" required>
+       
+            <label for="location">Lieu du Lavage :</label>
+            <select id="location" name="location" required>
+                
+                <option value="station">En Station</option>
+                <option value="domicile">À Domicile</option>
+            </select>
+        </div>  
+        <div class="border">
+            <label for="address">Adresse (si à domicile) :</label>
+            <input type="text" id="address" name="address" placeholder="Laissez vide si en station">
+
+            <label for="comments">Commentaire ou Demande Spéciale :</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+            <button type="submit">demende de reservation</button>
+        </form>
+    </div>
+
+</body>
+</html>
